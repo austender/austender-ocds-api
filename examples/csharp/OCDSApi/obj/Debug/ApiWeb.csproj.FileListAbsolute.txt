@@ -1,0 +1,164 @@
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\ApplicationInsights.config
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\csc.exe
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\vbc.exe
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\OCDSApi.dll.config
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\OCDSApi.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\OCDSApi.pdb
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Antlr3.Runtime.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\EntityFramework.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\EntityFramework.SqlServer.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.Web.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Owin.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Helpers.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Mvc.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Optimization.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Razor.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.WebPages.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\WebGrease.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.Web.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Helpers.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Mvc.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Optimization.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.Razor.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.WebPages.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Antlr3.Runtime.pdb
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Newtonsoft.Json.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\EntityFramework.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\EntityFramework.SqlServer.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\obj\Debug\ApiWeb.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\obj\Debug\OCDSApi.dll
+C:\Users\Mike\Documents\Visual Studio 2015\Projects\OCDSApi\OCDSApi\obj\Debug\OCDSApi.pdb
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\ApplicationInsights.config
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\csc.exe
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\System.Collections.Immutable.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\vbc.exe
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\VBCSCompiler.exe
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\roslyn\VBCSCompiler.exe.config
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\OCDSApi.dll.config
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\OCDSApi.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\OCDSApi.pdb
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Antlr3.Runtime.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\EntityFramework.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\EntityFramework.SqlServer.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.DependencyCollector.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.Web.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.WindowsServer.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.ApplicationInsights.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Google.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Newtonsoft.Json.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Owin.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Helpers.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Mvc.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Optimization.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Razor.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.WebPages.Deployment.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.WebPages.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.WebPages.Razor.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\WebGrease.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.DependencyCollector.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.Web.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AI.WindowsServer.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.ApplicationInsights.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Helpers.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Mvc.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Optimization.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.Razor.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.WebPages.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.WebPages.Deployment.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\System.Web.WebPages.Razor.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Antlr3.Runtime.pdb
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Newtonsoft.Json.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\EntityFramework.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\EntityFramework.SqlServer.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Google.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\obj\Debug\ApiWeb.csprojResolveAssemblyReference.cache
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\obj\Debug\OCDSApi.dll
+D:\Workspace\OCDS-API\examples\csharp\OCDSApi\obj\Debug\OCDSApi.pdb

@@ -1,0 +1,38 @@
+﻿@using OCDSApi.Models
+@model SearchViewModel
+@{
+    ViewBag.Title = "API Search";
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="searchForm">
+            @using (Html.BeginForm("SearchApi", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <hr />
+                <div class="form-group">
+                    @Html.LabelFor(m => m.CnId, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.CnId, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Date Range</label>
+                    <div class="col-md-10">
+                        <label for="DataStart">from: </label>
+                        @Html.TextBoxFor(m => m.DataStart, new { @class = "form-control" })
+
+                        <label for="DateEnd"> to: </label>
+                        @Html.TextBoxFor(m => m.DateEnd, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Search" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
