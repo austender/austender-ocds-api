@@ -5,17 +5,22 @@
 }
 <h1>@ViewBag.Title</h1>
 <p style="text-align: right">@Html.ActionLink("Back to API search form", "Index", "Home")</p>
-<hr/>
+
 @if (Model.Releases.Any())
 {
     foreach (var release in Model.Releases)
     {
         var supplier = release.parties.FirstOrDefault();
         var contract = release.contracts.FirstOrDefault();
+        <hr />
         <table style="width: 100%">
             <tr>
                 <th>CN ID</th>
                 <td>@release.id</td>
+            </tr>
+            <tr>
+                <th>Publish Date</th>
+                <td>@release.date</td>
             </tr>
             @if (contract != null)
             {

@@ -9,7 +9,6 @@ namespace OCDSApi.Models
         [Display(Name = "CN ID")]
         public string CnId { get; set; }
 
-        [Display(Name = "Date Range")]
         public string DataStart { get; set; }
 
         public bool DateEnd { get; set; }
