@@ -201,13 +201,45 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Error.cs" />
-    <Compile Include="Models\Release.cs" />
+    <Compile Include="Models\AdditionalIdentifier.cs" />
+    <Compile Include="Models\Contract.cs" />
+    <Compile Include="Models\Party.cs" />
+    <Compile Include="Models\Period.cs" />
+    <Compile Include="Models\Publisher.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Amendment.cs" />
+    <Compile Include="Models\Amendments.cs" />
     <Compile Include="Models\ApiResponse.cs" />
+    <Compile Include="Models\Award.cs" />
+    <Compile Include="Models\Buyer.cs" />
+    <Compile Include="Models\Change.cs" />
+    <Compile Include="Models\Classification.cs" />
+    <Compile Include="Models\ContactPoint.cs" />
+    <Compile Include="Models\ContractGroup.cs" />
+    <Compile Include="Models\ContractPeriod.cs" />
+    <Compile Include="Models\DeliveryLocation.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Gazetteer.cs" />
+    <Compile Include="Models\HardCopyCost.cs" />
+    <Compile Include="Models\Identifier.cs" />
+    <Compile Include="Models\IndustrialRelationsDetails.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\MinValue.cs" />
+    <Compile Include="Models\Prequalification.cs" />
+    <Compile Include="Models\Questionnaire.cs" />
+    <Compile Include="Models\Release.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SoftCopyCost.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\Tender.cs" />
+    <Compile Include="Models\Tenderer.cs" />
+    <Compile Include="Models\TenderPeriod.cs" />
+    <Compile Include="Models\TotalContractGroupPeriod.cs" />
+    <Compile Include="Models\Value.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utilities\RequestHelper.cs" />
@@ -272,6 +304,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\SearchApiResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

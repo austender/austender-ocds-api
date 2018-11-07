@@ -1,0 +1,100 @@
+﻿@using OCDSApi.Models
+@model ApiResponse
+@{
+    ViewBag.Title = "API Search Result";
+}
+<h1>@ViewBag.Title</h1>
+<p style="text-align: right">@Html.ActionLink("Back to API search form", "Index", "Home")</p>
+<hr/>
+@if (Model.Releases.Any())
+{
+    foreach (var release in Model.Releases)
+    {
+        var supplier = release.parties.FirstOrDefault();
+        var contract = release.contracts.FirstOrDefault();
+        <table style="width: 100%">
+            <tr>
+                <th>CN ID</th>
+                <td>@release.id</td>
+            </tr>
+            @if (contract != null)
+            {
+                <tr>
+                    <th>Description</th>
+                    <td>@Html.Raw(contract.description)</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>@contract.status</td>
+                </tr>
+                <tr>
+                    <th>Start Date</th>
+                    <td>@contract.period.startDate</td>
+                </tr>
+                <tr>
+                    <th>End Date</th>
+                    <td>@contract.period.endDate</td>
+                </tr>
+                <tr>
+                    <th>Value</th>
+                    <td>$@contract.value.Amount</td>
+                </tr>
+                <tr>
+                    <th>End Date</th>
+                    <td>@contract.period.endDate</td>
+                </tr>
+            }
+            @if (supplier != null)
+            {
+                <tr>
+                    <th>Supplier Name</th>
+                    <td>@supplier.name</td>
+                </tr>
+                <tr>
+                    <th>Postal Address</th>
+                    <td>@supplier.address.streetAddress</td>
+                </tr>
+                <tr>
+                    <th>Town/City</th>
+                    <td>@supplier.address.locality</td>
+                </tr>
+                <tr>
+                    <th>State/Territory</th>
+                    <td>@supplier.address.region</td>
+                </tr>
+                <tr>
+                    <th>Postcode</th>
+                    <td>@supplier.address.postalCode</td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td>@supplier.address.countryName</td>
+                </tr>
+            }
+            @if (contract?.amendments != null && contract.amendments.Any())
+            {
+                <tr>
+                    <th>Amendments</th>
+                    <td>
+                        <ul style="padding: 0">
+                            @foreach (var amendment in contract.amendments)
+                            {
+                                <li>
+                                    @amendment.id (@amendment.date)
+                                </li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+}
+else
+{
+    <p>There are no results that match your selection.</p>
+}
+
+
+
+

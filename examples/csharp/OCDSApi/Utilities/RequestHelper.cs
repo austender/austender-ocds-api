@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -13,9 +12,8 @@ namespace OCDSApi.Utilities
 
         public async Task<T> GetAndDecode<T>(string url) where T : ApiResponse
         {
-            var HttpResult = "";
-            //ServicePointManager.Expect100Continue = true;
-            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var httpResult = "";
+
             HttpResponseMessage response = await HttpClient.GetAsync(url);
 
             // Throw an exception if the request fails 
@@ -24,7 +22,7 @@ namespace OCDSApi.Utilities
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    HttpResult = await response.Content.ReadAsStringAsync();
+                    httpResult = await response.Content.ReadAsStringAsync();
                 }
                 else {
                     throw new System.InvalidOperationException("Error getting http response: " + response.Content.ReadAsStringAsync().Result);
@@ -34,16 +32,18 @@ namespace OCDSApi.Utilities
             {
                 throw new System.InvalidOperationException(e.Message + " from " + url);
             }
-
-            T apiResponse = JsonConvert.DeserializeObject<T>(HttpResult);
-
-            // not neccessary - already caught by EnsureSuccessStatusCode above
-            if (HttpResult.IndexOf("\"errors\":") > 0)
+            //ApiResponse apiResponse = new ApiResponse { releases = new List<Release>() };
+            try
             {
-                throw new System.InvalidOperationException(apiResponse.errors + " from " + url);
+                T apiResponse = JsonConvert.DeserializeObject<T>(httpResult);
+                return apiResponse;
+            }
+            catch (Exception)
+            {
+                throw new System.InvalidOperationException(" from " + url);
             }
 
-            return apiResponse;
+            
         }
     }
 }
