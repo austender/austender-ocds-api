@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
@@ -37,7 +38,7 @@ namespace OCDSApi.Controllers
 
             var requestHelper = new RequestHelper();
 
-            var baseUrl = "https://rrqcsg42vk.execute-api.ap-southeast-2.amazonaws.com/poc/ocds/";
+            var apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
 
             if (cnId.IsNullOrWhiteSpace() && dateStart.IsNullOrWhiteSpace() && dateEnd.IsNullOrWhiteSpace())
                 return Redirect("Index");
@@ -48,7 +49,7 @@ namespace OCDSApi.Controllers
             {
                 if (!cnId.IsNullOrWhiteSpace())
                 {
-                    apiResponse = await requestHelper.GetAndDecode<ApiResponse>(baseUrl + "findById/" + cnId);
+                    apiResponse = await requestHelper.GetAndDecode<ApiResponse>(apiUrl + cnId);
                 }
 
                 //todo: we need to do the date search after POC provides the date searches api.
