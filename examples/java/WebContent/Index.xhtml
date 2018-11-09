@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>API Search</title>
+	<style>
+	.grid 
+ {
+      border-spacing:0px 12px;
+ }
+ .date{
+ padding:10px;
+ }
+	</style>
+</h:head>
+<h:body>
+	<h1>API Search</h1>
+	<hr />
+	<br />
+	<h:form id="searchApi" prependId="false">
+		<h:panelGrid columns="2" border="0"  class="grid">
+			<h:panelGroup>
+				<h:outputLabel styleClass="span" for="cnId" value="CN ID " />
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:inputText styleClass="common_form_textbox_large" id="cnId"
+					name="cnId" value="#{apiSearch.cnId}" />
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:outputLabel styleClass="span" value="Publish Date " />
+			</h:panelGroup>
+			<h:panelGroup class="date">
+				<h:outputLabel styleClass="span" value=" From: " for="dateStart" />
+				<h:inputText styleClass="common_form_textbox_medium" value="#{apiSearch.startDate}"
+					id="dateStart" name="dateStart" />
+				<h:outputLabel styleClass="span" value=" To: " for="dateEnd" />
+				<h:inputText styleClass="common_form_textbox_medium" value="#{apiSearch.endDate}"
+					id="dateEnd" name="dateEnd" />
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:commandButton styleClass="common_form_button margin_left"
+					id="showButton" value="Search"
+					action="#{apiSearch.search}">
+				</h:commandButton>
+			</h:panelGroup>
+			<h:panelGroup></h:panelGroup>
+		</h:panelGrid>
+	</h:form>
+	<h:outputLabel styleClass="span" value="#{apiSearch.apiResponse.publishedDate}" />
+	<p:dataTable var="release" value="#{apiSearch.apiResponse.releases.releases}">
+        <h:panelGrid columns="2" border="0"  class="grid">
+        	<h:panelGroup>
+				<h:outputLabel styleClass="span" value="CN ID" />
+			</h:panelGroup>
+     		<h:panelGroup>
+				<h:outputLabel styleClass="span" value="#{release.id}" />
+			</h:panelGroup>
+        </h:panelGrid>
+    </p:dataTable>
+</h:body>
+</html>
