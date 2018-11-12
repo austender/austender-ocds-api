@@ -19,6 +19,8 @@
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/cdi-api-2.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/javax.inject-1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/afterdark-1.0.10.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/afterwork-1.0.10.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF 2.2">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>

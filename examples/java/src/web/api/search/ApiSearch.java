@@ -1,11 +1,11 @@
 package web.api.search;
 
-import java.io.IOException;
+import java.util.Date;
+
+import javax.faces.annotation.ManagedProperty;
 import  javax.faces.bean.ManagedBean; 
 import  javax.faces.bean.ViewScoped;
-import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
+
 import web.api.model.ApiResponse;
 import web.api.utils.JsonConverter;
 
@@ -13,31 +13,36 @@ import web.api.utils.JsonConverter;
 @ManagedBean (name="apiSearch")  
 @ViewScoped 
 public class ApiSearch {
+	@ManagedProperty(value = "#{param.cnId}")
 	private String cnId = "";
-	private String startDate = "";
-	private String endDate = "";
+	
+	private Date startDate;
+	private Date endDate;
+	public boolean showResults = false;
+
+	public boolean isShowResults() {
+		return showResults;
+	}
+
+	public void setShowResults(boolean showResults) {
+		this.showResults = showResults;
+	}
 	private ApiResponse apiResponse;
 	public ApiSearch() {
+
 	}
 	
-	public void search() throws Exception {
-		String url = "https://rrqcsg42vk.execute-api.ap-southeast-2.amazonaws.com/poc/ocds/findById/CN3512249";
-	    String json = new JsonConverter().getApiJson(url);
-		ObjectMapper mapper = new ObjectMapper();
-		//mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
+	public void search(){
+		ApiResponse response = new ApiResponse();
+		this.showResults = true;
+		
 		try {
-			this.apiResponse = mapper.readValue(json, ApiResponse.class);
-		} catch (JsonParseException e) {
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+			this.apiResponse = new JsonConverter().getApiJson(this.cnId, this.startDate, this.endDate);
+		} catch (Exception e) {
+			this.apiResponse = response;
 		}
 	}
-	
-	
+		
 	public String getCnId() {
 		return cnId;
 	}
@@ -45,16 +50,16 @@ public class ApiSearch {
 	public void setCnId(String cnId) {
 		this.cnId = cnId;
 	}
-	public String getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
 	public ApiResponse getApiResponse() {
