@@ -59,59 +59,59 @@
 					<table class="borderless">
 					<tbody>
 						<tr>
-							<th>CN ID: </th>
+							<th>CN ID </th>
 							<td>{{release.id}}</td>
 						</tr>
 						<tr>
-							<th>Publish Date:</th>
+							<th>Publish Date</th>
 							<td>{{release.date}}</td>
 						</tr>
 						<tr>
-							<th>Description:</th>
+							<th>Description</th>
 							<td ng-bind-html="release.contracts[0].description | trustHtmlContent"></td>
 						</tr>
 						<tr>
-							<th>Status:</th>
+							<th>Status</th>
 							<td>{{release.contracts[0].status}}</td>
 						</tr>
 						<tr>
-							<th>Start Date:</th>
+							<th>Start Date</th>
 							<td>{{release.contracts[0].period.startDate}}</td>
 						</tr>
 						<tr>
-							<th>End Date:</th>
+							<th>End Date</th>
 							<td>{{release.contracts[0].period.endDate}}</td>
 						</tr>
 						<tr>
-							<th>Value:</th>
+							<th>Value</th>
 							<td>{{release.contracts[0].value.amount | currency}}</td>
 						</tr>
 						<tr>
-							<th>Supplier Name:</th>
+							<th>Supplier Name</th>
 							<td>{{release.parties[0].name}}</td>
 						</tr>
 						<tr>
-							<th>Postal Address:</th>
+							<th>Postal Address</th>
 							<td>{{release.parties[0].address.streetAddress}}</td>
 						</tr>
 						<tr>
-							<th>Town/City:</th>
+							<th>Town/City</th>
 							<td>{{release.parties[0].address.locality}}</td>
 						</tr>
 						<tr>
-							<th>State/Territory:</th>
+							<th>State/Territory</th>
 							<td>{{release.parties[0].address.region}}</td>
 						</tr>
 						<tr>
-							<th>Postcode:</th>
+							<th>Postcode</th>
 							<td>{{release.parties[0].address.postalCode}}</td>
 						</tr>
 						<tr>
-							<th>Country:</th>
+							<th>Country</th>
 							<td>{{release.parties[0].address.countryName}}</td>
 						</tr>
 						<tr ng-if="release.contracts[0].amendments.length">
-							<th>Amendments:</th>
+							<th>Amendments</th>
 							<td>
 								<ul>
 									<li ng-repeat="amendment in release.contracts[0].amendments">
