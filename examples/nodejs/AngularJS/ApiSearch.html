@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="js/angular/angular.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<script src="config.js"></script>
+	<script src="js/apiSearch.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<title>API Search</title>
+</head>
+<body>
+	<div ng-app="webApp" ng-controller="searchForm" class="col-sm-9">
+		<h1>API Search</h1>
+		<hr/> 
+		<div style="color:red" role="alert">{{errorMessage}}</div>
+		<form class="form col-md-9" class="">
+			<div class="form-group">
+				<label for="cnId" class="form-label"><b>CN ID:</b></label>
+				<input type="text" ng-model="cnId" class="form-control" id="cnId" 
+				placeholder="">
+
+			</div>
+			<div class="form-group">
+				<b>Publish Date</b>
+				<div class="row">
+					<div class="col-sm-10">
+						<div class="date-field">
+							<label for="form-dateStart" title="from">
+								From: 
+							</label>
+							<div class="date">
+								<input name="dateStart" id="form-dateStart" type="text" ng-model="dateStart" class="form-control" autocomplete="off">
+								<i></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-10">
+						<div class="date-field">
+							<label for="form-dateEnd" title="to">
+								To:  
+							</label>
+							<div class="date">
+								<input name="dateEnd" id="form-dateEnd" type="text" ng-model="dateEnd" class="form-control" autocomplete="off">
+								<i></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<button ng-click="search()">Search</button>
+			</div>	
+			<button class="btn btn-sm btn-warning" ng-show="loading"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
+			<div ng-show="showResults" class="results">
+				<h3>Search Results:</h3><br/>
+				<p ng-if="!data.releases[0].contracts[0].id.length">There are no results that match your selection.</p>
+				<div ng-repeat="release in data.releases" ng-if="data.releases[0].contracts[0].id.length">
+					<table class="borderless">
+					<tbody>
+						<tr>
+							<th>CN ID: </th>
+							<td>{{release.id}}</td>
+						</tr>
+						<tr>
+							<th>Publish Date:</th>
+							<td>{{release.date}}</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td ng-bind-html="release.contracts[0].description | trustHtmlContent"></td>
+						</tr>
+						<tr>
+							<th>Status:</th>
+							<td>{{release.contracts[0].status}}</td>
+						</tr>
+						<tr>
+							<th>Start Date:</th>
+							<td>{{release.contracts[0].period.startDate}}</td>
+						</tr>
+						<tr>
+							<th>End Date:</th>
+							<td>{{release.contracts[0].period.endDate}}</td>
+						</tr>
+						<tr>
+							<th>Value:</th>
+							<td>{{release.contracts[0].value.amount | currency}}</td>
+						</tr>
+						<tr>
+							<th>Supplier Name:</th>
+							<td>{{release.parties[0].name}}</td>
+						</tr>
+						<tr>
+							<th>Postal Address:</th>
+							<td>{{release.parties[0].address.streetAddress}}</td>
+						</tr>
+						<tr>
+							<th>Town/City:</th>
+							<td>{{release.parties[0].address.locality}}</td>
+						</tr>
+						<tr>
+							<th>State/Territory:</th>
+							<td>{{release.parties[0].address.region}}</td>
+						</tr>
+						<tr>
+							<th>Postcode:</th>
+							<td>{{release.parties[0].address.postalCode}}</td>
+						</tr>
+						<tr>
+							<th>Country:</th>
+							<td>{{release.parties[0].address.countryName}}</td>
+						</tr>
+						<tr ng-if="release.contracts[0].amendments.length">
+							<th>Amendments:</th>
+							<td>
+								<ul>
+									<li ng-repeat="amendment in release.contracts[0].amendments">
+										<a href ng-click="search(amendment.id)">{{amendment.id}}</a> ({{amendment.date}})
+									</li>	
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<hr/>
+				</div>	  
+			</div>
+		</form>
+	</div>
+</body>
+</html>
