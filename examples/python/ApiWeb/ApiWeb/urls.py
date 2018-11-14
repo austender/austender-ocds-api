@@ -17,10 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from . import view
+from . import search
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', view.index),
-    url(r'^index$', view.index),
-    url(r'^search$', view.search)
+    url(r'^CnIdSearch-form$', view.CnIdSearch),
+    url(r'^DateRangeSearch-form$', view.DateRangeSearch),
+    url(r'^CnIdSearch', search.CnIdSearch),
+    url(r'^DateRangeSearch', search.DateRangeSearch),
+    url('^hello', view.hello)
 ]
