@@ -1,0 +1,2 @@
+var findByIdUrl="https://rrqcsg42vk.execute-api.ap-southeast-2.amazonaws.com/poc/ocds/findById/";
+var findByDatesUrl="https://rrqcsg42vk.execute-api.ap-southeast-2.amazonaws.com/poc/ocds/findByDates/";

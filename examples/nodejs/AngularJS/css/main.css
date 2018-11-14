@@ -1,0 +1,43 @@
+.form{
+	padding-left: 5px
+}
+.form .date-field {
+	width: 50%;
+	padding: 2px 0;
+	overflow: hidden;
+}
+.form .date-field label {
+	float: left;
+	padding-right: 10px;
+	line-height: 30px;
+	padding-left: 0;
+}
+.form .date-field .date {
+	position: relative;
+	width: 80%;
+	float: right;
+}
+.results{
+	padding-left: 0px;
+}
+td{
+	padding-left: 15px;
+}
+.form-control{
+	width: auto;
+}
+
+.glyphicon-refresh-animate {
+	-animation: spin .7s infinite linear;
+	-webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+	from { -webkit-transform: rotate(0deg);}
+	to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+	from { transform: scale(1) rotate(0deg);}
+	to { transform: scale(1) rotate(360deg);}
+}
