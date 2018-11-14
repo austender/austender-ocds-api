@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>API Search</title>
+	<style>
+.grid {
+	border-spacing: 0px 12px;
+}
+.date {
+	padding: 10px;
+}
+</style>
+</h:head>
+<h:body>
+	<h1>API Search by Publish Date</h1>
+	<hr />
+	<f:metadata>
+		<f:viewParam name="cnId" value="#{apiSearch.cnId}" />
+		<f:viewParam name="startDate" value="#{apiSearch.startDate}" />
+		<f:viewParam name="endDate" value="#{apiSearch.endDate}" />
+		<f:viewAction action="#{apiSearch.search}"
+			if="#{not empty param.cnId or not empty param.startDate or not empty param.endDate}" />
+	</f:metadata>
+	<h:form id="searchApi" prependId="false">
+		<h:panelGrid columns="2" border="0" class="grid">
+			<h:panelGroup>
+				<p:outputLabel styleClass="span" value="Publish Date " />
+			</h:panelGroup>
+			<h:panelGroup class="date">
+				<p:outputLabel styleClass="span" value=" From: " for="startDate" />
+               <!--<p:calendar id="startDate" name="startDate" value="#{apiSearch.startDate}" pattern="yyyy-MMM-dd" />-->
+				<p:inputText id="startDate" name="startDate" value="#{apiSearch.startDate}" />
+				<p:outputLabel styleClass="span" value=" To: " for="endDate" />
+                <!--<p:calendar id="endDate" name="endDate" value="#{apiSearch.endDate}" pattern="yyyy-MMM-dd" />-->
+				<p:inputText id="endDate" name="endDate" value="#{apiSearch.endDate}" />
+			</h:panelGroup>
+			<h:panelGroup>
+				<p:commandButton 
+					id="showButton" value="Search" action="#{apiSearch.search}" ajax="false"/>
+
+			</h:panelGroup>
+			<h:panelGroup></h:panelGroup>
+		</h:panelGrid>
+	</h:form>
+	<h:outputLabel rendered="#{apiSearch.showResults}">
+		<h3>Search Results:</h3>
+		<h:outputLabel rendered="#{not empty apiSearch.apiResponse.releases}">
+			<ui:repeat value="#{apiSearch.apiResponse.releases}" var="release"
+				class="grid" varStatus="_release">
+				<ui:param name="contract" value="#{release.contracts[0]}" />
+				<ui:param name="supplier" value="#{release.parties[0]}" />
+				<p:panelGrid columns="2" border="0">
+					<b>CN ID</b>
+					<h:outputText value="#{release.id}" />
+					<b>Publish Date</b>
+					<h:outputText value="#{release.date}"/>
+					<b>Description</b>
+					<h:outputText value="#{contract.description}" escape="false" />
+					<b>Status</b>
+					<h:outputText value="#{contract.status}" />
+					<b>Start Date</b>
+					<h:outputText value="#{contract.period.startDate}" />
+					<b>End Date</b>
+					<h:outputText value="#{contract.period.endDate}" />
+					<b>Value</b>
+					<h:outputText value="$#{contract.value.amount}" />
+					<b>Supplier Name</b>
+					<h:outputText value="#{supplier.name}" />
+					<b>Postal Address</b>
+					<h:outputText value="#{supplier.address.streetAddress}" />
+					<b>Town/City</b>
+					<h:outputText value="#{supplier.address.locality}" />
+					<b>State/Territory</b>
+					<h:outputText value="#{supplier.address.region}" />
+					<b>Postcode</b>
+					<h:outputText value="#{supplier.address.postalCode}" />
+					<b>Country</b>
+					<h:outputText value="#{supplier.address.countryName}" />
+					<h:outputLabel rendered="#{not empty contract.amendments}">
+						<b>Amendments</b>
+					</h:outputLabel>
+					<h:outputLabel rendered="#{not empty contract.amendments}">		
+						<ui:repeat value="#{contract.amendments}" var="amendment">
+							<li>
+								<h:link value="#{amendment.cnid}" outcome="SearchByCnId">
+									<f:param name="cnId" value="#{amendment.cnid}" />
+								</h:link> <h:outputText rendered="#{not empty amendment.date}" value=" (#{amendment.date})" />
+							</li>
+						</ui:repeat>
+					</h:outputLabel>
+				</p:panelGrid>
+				<h:outputLabel rendered="#{!_release.last}">
+					<hr />
+				</h:outputLabel>
+			</ui:repeat>
+		</h:outputLabel>
+		<p:outputLabel rendered="#{empty apiSearch.apiResponse.releases}">
+			<h:outputText value="There are no results that match your selection." />
+		</p:outputLabel>
+	</h:outputLabel>
+</h:body>
+</html>

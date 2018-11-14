@@ -1,7 +1,5 @@
 package web.api.search;
 
-import java.util.Date;
-
 import javax.faces.annotation.ManagedProperty;
 import  javax.faces.bean.ManagedBean; 
 import  javax.faces.bean.ViewScoped;
@@ -16,8 +14,8 @@ public class ApiSearch {
 	@ManagedProperty(value = "#{param.cnId}")
 	private String cnId = "";
 	
-	private Date startDate;
-	private Date endDate;
+	private String startDate;
+	private String endDate;
 	public boolean showResults = false;
 
 	public boolean isShowResults() {
@@ -50,16 +48,16 @@ public class ApiSearch {
 	public void setCnId(String cnId) {
 		this.cnId = cnId;
 	}
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 	public ApiResponse getApiResponse() {

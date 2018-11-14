@@ -9,7 +9,14 @@ public class Amendment
     public String startdate ;
     public Double contractamendmentvalue ;
     public Double amendedvalue ;
+    public String cnid;
     
+	public String getCnid() {
+		return cnid;
+	}
+	public void setCnid(String cnid) {
+		this.cnid = cnid;
+	}
 	public String getId() {
 		return id;
 	}
