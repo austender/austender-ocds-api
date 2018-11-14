@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/ApiWeb/config.py" line="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="855c6a1a-5bc5-4b6f-b080-09dd91d7e16a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiWeb/RequestHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeb/RequestHelper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiWeb/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeb/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiWeb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiWeb/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeb/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/searchApiResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/searchApiResult.html" afterDir="false" />
-    </list>
+    <list default="true" id="855c6a1a-5bc5-4b6f-b080-09dd91d7e16a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
