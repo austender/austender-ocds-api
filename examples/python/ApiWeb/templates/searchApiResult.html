@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{Title}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <h1>{{Title}}</h1>
+    <p style="text-align: right;"><a href="/">Back to API search form</a></p>
+
+    {% for release in data.releases %}
+        {% for party in release.parties %}
+
+        {% endfor %}
+        <hr/>
+        <table style="width: 100%">
+            <tr>
+                <th>CN ID</th>
+                <td>{{release.id}}</td>
+            </tr>
+            <tr>
+                <th>Publish Date</th>
+                <td>{{release.date}}</td>
+            </tr>
+            {% if release.contract %}
+                 <tr>
+                    <th>Description</th>
+                    <td>{{release.contract.Description}}</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>{{release.contract.status}}</td>
+                </tr>
+                <tr>
+                    <th>Start Date</th>
+                    <td>{{release.contract.period.startDate}}</td>
+                </tr>
+                <tr>
+                    <th>End Date</th>
+                    <td>{{release.contract.period.endDate}}</td>
+                </tr>
+                <tr>
+                    <th>Value</th>
+                    <td>{{release.contract.value.Amount}}</td>
+                </tr>
+            {% endif %}
+            {% if release.contract %}
+                <tr>
+                    <th>Supplier Name</th>
+                    <td>{{release.supplier.name}}</td>
+                </tr>
+                <tr>
+                    <th>Postal Address</th>
+                    <td>{{release.supplier.address.streetAddress}}</td>
+                </tr>
+                <tr>
+                    <th>Town/City</th>
+                    <td>{{release.supplier.address.locality}}</td>
+                </tr>
+                <tr>
+                    <th>State/Territory</th>
+                    <td>{{release.supplier.address.region}}</td>
+                </tr>
+                <tr>
+                    <th>Postcode</th>
+                    <td>{{release.supplier.address.postalCode}}</td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td>{{release.supplier.address.countryName}}</td>
+                </tr>
+            {% endif %}
+            {% if release.contract.amendments %}
+                <tr>
+                    <th>Amendments</th>
+                    <td>
+                        <ul style="padding: 0">
+                            {% for amendment in release.contract.amendments %}
+                                <li>
+                                    <a href="?CnId={{amendment.id}}" target="_blank" >{{amendment.id}}</a>({{amendment.date}})
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            {% endif %}
+        </table>
+    {% endfor %}
+</body>
+</html>
