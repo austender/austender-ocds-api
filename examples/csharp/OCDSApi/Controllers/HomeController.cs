@@ -30,6 +30,16 @@ namespace OCDSApi.Controllers
             return View();
         }
 
+        public ActionResult SearchByCnId()
+        {
+            return View();
+        }
+
+        public ActionResult SearchByPublishDate()
+        {
+            return View();
+        }
+
         public async Task<ActionResult> SearchApi()
         {
             var cnId = Request["CnId"];
@@ -38,24 +48,24 @@ namespace OCDSApi.Controllers
 
             var requestHelper = new RequestHelper();
 
-            var apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
+            var url = "";
+            if (!cnId.IsNullOrWhiteSpace())
+            {
+                url = ConfigurationManager.AppSettings["FindByIdUrl"] + cnId;
+            }
+            else if (!dateStart.IsNullOrWhiteSpace() && !dateEnd.IsNullOrWhiteSpace())
+            {
+                url = ConfigurationManager.AppSettings["FindByPublishDateUrl"] + dateStart + "/" + dateEnd;
+            }
 
-            if (cnId.IsNullOrWhiteSpace() && dateStart.IsNullOrWhiteSpace() && dateEnd.IsNullOrWhiteSpace())
-                return Redirect("Index");
 
-            ApiResponse apiResponse = new ApiResponse {Releases = new List<Release>()};
+            ApiResponse apiResponse;
 
             try
             {
-                if (!cnId.IsNullOrWhiteSpace())
-                {
-                    apiResponse = await requestHelper.GetAndDecode<ApiResponse>(apiUrl + cnId);
-                }
-
-                //todo: we need to do the date search after POC provides the date searches api.
-
+                apiResponse = await requestHelper.GetAndDecode<ApiResponse>(url);
             }
-            catch (InvalidOperationException)
+            catch (Exception)
             {
                 apiResponse = new ApiResponse { Releases = new List<Release>() };
             }

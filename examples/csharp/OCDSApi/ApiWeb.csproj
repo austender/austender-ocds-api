@@ -305,6 +305,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\SearchApiResult.cshtml" />
+    <Content Include="Views\Home\SearchByCnId.cshtml" />
+    <Content Include="Views\Home\SearchByPublishDate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
