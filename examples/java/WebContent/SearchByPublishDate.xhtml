@@ -8,13 +8,25 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			$(".datePicker").datepicker({ dateFormat: 'yy-mm-dd' });
+		});
+	</script>
 	<title>API Search</title>
 	<style>
 .grid {
 	border-spacing: 0px 12px;
 }
+
 .date {
 	padding: 10px;
+}
+
+.datePicker {
+	
 }
 </style>
 </h:head>
@@ -35,16 +47,15 @@
 			</h:panelGroup>
 			<h:panelGroup class="date">
 				<p:outputLabel styleClass="span" value=" From: " for="startDate" />
-               <!--<p:calendar id="startDate" name="startDate" value="#{apiSearch.startDate}" pattern="yyyy-MMM-dd" />-->
-				<p:inputText id="startDate" name="startDate" value="#{apiSearch.startDate}" />
+				<p:inputText class="datePicker" id="startDate" name="startDate"
+					value="#{apiSearch.startDate}" />
 				<p:outputLabel styleClass="span" value=" To: " for="endDate" />
-                <!--<p:calendar id="endDate" name="endDate" value="#{apiSearch.endDate}" pattern="yyyy-MMM-dd" />-->
-				<p:inputText id="endDate" name="endDate" value="#{apiSearch.endDate}" />
+				<p:inputText class="datePicker" id="endDate" name="endDate"
+					value="#{apiSearch.endDate}" />
 			</h:panelGroup>
 			<h:panelGroup>
-				<p:commandButton 
-					id="showButton" value="Search" action="#{apiSearch.search}" ajax="false"/>
-
+				<p:commandButton id="showButton" value="Search"
+					action="#{apiSearch.search}" ajax="false" />
 			</h:panelGroup>
 			<h:panelGroup></h:panelGroup>
 		</h:panelGrid>
@@ -60,7 +71,7 @@
 					<b>CN ID</b>
 					<h:outputText value="#{release.id}" />
 					<b>Publish Date</b>
-					<h:outputText value="#{release.date}"/>
+					<h:outputText value="#{release.date}" />
 					<b>Description</b>
 					<h:outputText value="#{contract.description}" escape="false" />
 					<b>Status</b>
@@ -86,13 +97,12 @@
 					<h:outputLabel rendered="#{not empty contract.amendments}">
 						<b>Amendments</b>
 					</h:outputLabel>
-					<h:outputLabel rendered="#{not empty contract.amendments}">		
+					<h:outputLabel rendered="#{not empty contract.amendments}">
 						<ui:repeat value="#{contract.amendments}" var="amendment">
-							<li>
-								<h:link value="#{amendment.cnid}" outcome="SearchByCnId">
+							<li><h:link value="#{amendment.cnid}" outcome="SearchByCnId">
 									<f:param name="cnId" value="#{amendment.cnid}" />
-								</h:link> <h:outputText rendered="#{not empty amendment.date}" value=" (#{amendment.date})" />
-							</li>
+								</h:link> <h:outputText rendered="#{not empty amendment.date}"
+									value=" (#{amendment.date})" /></li>
 						</ui:repeat>
 					</h:outputLabel>
 				</p:panelGrid>

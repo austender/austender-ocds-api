@@ -1,5 +1,7 @@
 package web.api.search;
 
+import java.util.Date;
+
 import javax.faces.annotation.ManagedProperty;
 import  javax.faces.bean.ManagedBean; 
 import  javax.faces.bean.ViewScoped;

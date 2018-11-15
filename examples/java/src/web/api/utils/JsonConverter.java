@@ -2,6 +2,9 @@ package web.api.utils;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import org.codehaus.jackson.map.ObjectMapper;
@@ -16,6 +19,8 @@ public class JsonConverter {
 		InputStream objFileInputStream = getClass().getClassLoader().getResourceAsStream("config.properties");
 		Properties commonProperties = new Properties();
 		commonProperties.load(objFileInputStream);
+		startDate = formatDate(startDate);
+		endDate = formatDate(endDate);
 		
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -23,14 +28,16 @@ public class JsonConverter {
 		
 		if(cnId != null && cnId.length() > 0) {
 			url = String.valueOf(commonProperties.get("FindByIdUrl")) + cnId;
-		}else {
+		}else if(startDate.length() > 0 && startDate.length() > 0) {
 			url = String.valueOf(commonProperties.get("FindByPublishDateUrl")) + startDate + "/" + endDate;
 		}
 		
-		URL apiUrl = new URL(url);
-		//parse JSON results with Jackson
-		response = mapper.readValue(apiUrl, ApiResponse.class);
-
+		if(url != "") {
+			URL apiUrl = new URL(url);
+			//parse JSON results with Jackson
+			response = mapper.readValue(apiUrl, ApiResponse.class);
+		}
+		
 		return response;
 		
 		/*URL obj = new URL(findByIdUrl + cnId);
@@ -47,5 +54,13 @@ public class JsonConverter {
 		}
 		reader.close();
 		return response.toString();*/
+	}
+	
+	public String formatDate(String date) throws ParseException {
+		if(date != null && date.length()>0) {
+			return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(new SimpleDateFormat("yyyy-MM-dd").parse(date));
+		}
+		
+		return "";
 	}
 }
