@@ -7,7 +7,7 @@
 <h1>@ViewBag.Title</h1>
 <p style="text-align: right">@Html.ActionLink("Back to API search home", "Index", "Home")</p>
 
-@if (Model.Releases.Any())
+@if (Model.Releases != null && Model.Releases.Any())
 {
     foreach (var release in Model.Releases)
     {
@@ -82,7 +82,7 @@
                             @foreach (var amendment in contract.amendments)
                             {
                                 <li>
-                                    @Html.ActionLink(amendment.id,"SearchApi","Home", new {CnId=amendment.id}, new {target= "_blank" }) (@amendment.date)
+                                    @Html.ActionLink(amendment.cnid,"SearchApi","Home", new {CnId=amendment.cnid }, new {target= "_blank" }) @if(!string.IsNullOrEmpty(amendment.date)) {@Html.Raw("(" + amendment.date + ")")} 
                                 </li>
                             }
                         </ul>
