@@ -6,6 +6,16 @@
     <meta charset="UTF-8">
     <title>{{Title}}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}">
+    <script src="{% static 'js/jquery-1.12.4.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+
+    <script>
+        $( function() {
+            $("#DateStart").datepicker();
+            $("#DateEnd").datepicker();
+        } );
+    </script>
 </head>
 <body>
 <h2>{{ Title }}</h2>
@@ -19,9 +29,9 @@
                     <label class="col-md-2 control-label">Publish Date</label>
                     <div class="col-md-10">
                         <label for="DataStart">from: </label>
-                        <input type="text" name="DateStart" class="form-control" value="2016-03-01T07:20:10Z">
+                        <input type="text" name="DateStart" id="DateStart" class="form-control" value="">
                         <label for="DateEnd"> to: </label>
-                        <input type="text" name="DateEnd" class="form-control" value="2016-06-06T05:45:00Z">
+                        <input type="text" name="DateEnd" id="DateEnd" class="form-control" value="">
                     </div>
                 </div>
                 <div class="form-group">
