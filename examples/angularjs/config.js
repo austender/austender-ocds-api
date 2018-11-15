@@ -1,0 +1,2 @@
+var findByIdUrl="https://cwnhgpq0g0.execute-api.ap-southeast-2.amazonaws.com/test/ocds/findById/";
+var findByPublishDateUrl="https://cwnhgpq0g0.execute-api.ap-southeast-2.amazonaws.com/test/ocds/findByDates/contractPublished/";

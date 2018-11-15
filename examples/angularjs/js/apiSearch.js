@@ -1,11 +1,22 @@
 var app = angular.module('webApp', []);
 
+app.filter('date', function($filter)
+{
+    return function(input)
+    {
+        if(input == null){ return ""; }
+        var _date = $filter('date')(new Date(input), 'dd/MM/yyyy');
+        return _date.toUpperCase();
+    };
+});
+
 app.controller('searchForm', function($scope, $http) {
 	$scope.searchById = function(cnId){
 		if(!cnId){cnId = $scope.cnId;}else{$scope.cnId=cnId;}
 		
 		if(!cnId){
 			$scope.errorMessage = "You must enter CN ID."
+			$scope.showResults = false;
 		}
 		else{
 			$scope.search(findByIdUrl + cnId);
@@ -16,9 +27,12 @@ app.controller('searchForm', function($scope, $http) {
 	$scope.searchByPublishDate = function(){
 		if(!$scope.dateStart || !$scope.dateEnd){
 			$scope.errorMessage = "You must enter Publish Date."
+			$scope.showResults = false;
 		}
 		else{
-			$scope.search(findByPublishDateUrl + $scope.dateStart + "/" + $scope.dateEnd);
+			 var startDate = $scope.formatDate($scope.dateStart);
+			 var endDate = $scope.formatDate($scope.dateEnd);
+			$scope.search(findByPublishDateUrl + startDate + "/" + endDate);
 		}
 		
 	}
@@ -32,7 +46,6 @@ app.controller('searchForm', function($scope, $http) {
 		}).then(function successCallback(response) {
 			$scope.showResults = true;
 			$scope.data = response.data;
-			console.log(response.data);
 		}, function errorCallback(response) {
 			$scope.showResults = true;
 			$scope.data = response.data;
@@ -40,6 +53,15 @@ app.controller('searchForm', function($scope, $http) {
 			$scope.loading = false;
 		});
 	};
+
+	$scope.formatDate = function(strDate){
+		var date = new Date(strDate);
+		return date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+"T00:00:00Z";
+	}
 });
 
 app.filter("trustHtmlContent", ['$sce', $sce => htmlCode => $sce.trustAsHtml(htmlCode)]);
+
+
+
+

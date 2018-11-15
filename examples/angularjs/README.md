@@ -1,8 +1,8 @@
-# Java API call
+# AngularJS API call
 This is a UI page for querying the CNs based on the CN ID or Publish Date by calling the given API which can be configured.
 
 ## Use the UI
-Run the application and it goes to Index.html which has two links below:
+Run the Index.html and the page has two links below:
 - Search by CN ID. This link goes to a form where you can search CNs by CN ID.
 - Search by Publish Date. This links goes to a form where you you can search by Publish Date(Both "From" and "To" must be provided.)
 
@@ -10,8 +10,8 @@ The above search execute queries and list the results on the same page below the
 
 ## Download code and setup
 - The code can be downloaded directly or cloned by git tools (SourceTree, etc).
-- In the Eclipse, open the project, build and run the application with Tomcat. 
-- The API URL can be configured in the src/config.properties file. (FindByIdUrl or FindByPublishDateUrl)
+- Open the Index.html with browsers. 
+- The API URL can be configured in the config.js file. (findByIdUrl or findByPublishDateUrl)
 
 ## Test the UI
 When searching in the form, 

@@ -1,2 +1,0 @@
-var findByIdUrl="https://pckejpgtj2.execute-api.ap-southeast-2.amazonaws.com/dev/ocds/findById/";
-var findByPublishDateUrl="https://pckejpgtj2.execute-api.ap-southeast-2.amazonaws.com/dev/ocds/findByDates/contractPublished/";

@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<script src="../js/angular/angular.min.js"></script>
-	<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+	<script src="../js/angular.min.js"></script>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<script src="../config.js"></script>
 	<script src="../js/apiSearch.js"></script>
 	<link rel="stylesheet" href="../css/main.css">
@@ -11,45 +11,24 @@
 </head>
 <body>
 	<div ng-app="webApp" ng-controller="searchForm" class="col-sm-9">
-		<h1>API Search by Publish Date</h1>
+		<h1>API Search by CN ID</h1>
 		<hr/> 
 		<div style="color:red" role="alert">{{errorMessage}}</div><br/>
 		<form class="form col-md-9" class="">
 			<div class="form-group">
-				<b>Publish Date</b>
-				<div class="row">
-					<div class="col-sm-10">
-						<div class="date-field">
-							<label for="form-dateStart" title="from">
-								From: 
-							</label>
-							<div class="date">
-								<input name="dateStart" id="form-dateStart" type="text" ng-model="dateStart" class="form-control" autocomplete="off">
-								<i></i>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-10">
-						<div class="date-field">
-							<label for="form-dateEnd" title="to">
-								To:  
-							</label>
-							<div class="date">
-								<input name="dateEnd" id="form-dateEnd" type="text" ng-model="dateEnd" class="form-control" autocomplete="off">
-								<i></i>
-							</div>
-						</div>
-					</div>
-				</div>
+				<label for="cnId" class="form-label"><b>CN ID:</b></label>
+				<input type="text" ng-model="cnId" class="form-control" id="cnId" 
+				placeholder="">
+
 			</div>
 			<div class="form-group">
-				<button ng-click="searchByPublishDate()">Search</button>
+				<button ng-click="searchById()">Search</button>
 			</div>	
 			<button class="btn btn-sm btn-warning" ng-show="loading"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
 			<div ng-show="showResults" class="results">
 				<h3>Search Results:</h3><br/>
 				<p ng-if="!data.releases[0].contracts[0].id.length">There are no results that match your selection.</p>
-				<div ng-repeat="release in data.releases" ng-if="data.releases[0].contracts[0].id.length">
+				<div ng-repeat="release in data.releases">
 					<table class="borderless">
 					<tbody>
 						<tr>
