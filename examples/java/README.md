@@ -1,6 +1,10 @@
 # Java API call
 This is a UI page for querying the CNs based on the CN ID or Publish Date by calling the given API which can be configured.
 
+## Framework
+ - JavaServer Faces (JSF) (https://www.tutorialspoint.com/jsf/)
+ - jQuery UI (https://jqueryui.com/)
+
 ## Use the UI
 Run the application and it goes to Index.html which has two links below:
 - Search by CN ID. This link goes to a form where you can search CNs by CN ID.
