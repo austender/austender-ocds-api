@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
 using OCDSApi.Models;
 using OCDSApi.Utilities;
+using static System.String;
 
 namespace OCDSApi.Controllers
 {
@@ -45,7 +46,15 @@ namespace OCDSApi.Controllers
             var cnId = Request["CnId"];
             var dateStart = Request["DataStart"];
             var dateEnd = Request["DateEnd"];
-
+            DateTime temp;
+            if (!IsNullOrEmpty(dateStart) && DateTime.TryParse(dateStart, out temp))
+            {
+                dateStart = temp.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ssZ");
+            }
+            if (!IsNullOrEmpty(dateEnd) && DateTime.TryParse(dateEnd, out temp))
+            {
+                dateEnd = temp.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ssZ");
+            }
             var requestHelper = new RequestHelper();
 
             var url = "";
@@ -57,7 +66,6 @@ namespace OCDSApi.Controllers
             {
                 url = ConfigurationManager.AppSettings["FindByPublishDateUrl"] + dateStart + "/" + dateEnd;
             }
-
 
             ApiResponse apiResponse;
 

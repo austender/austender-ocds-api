@@ -5,6 +5,7 @@ namespace OCDSApi.Models
     public class Amendment
     {
         public string id { get; set; }
+        public string cnid { get; set; }
         public string date { get; set; }
         public string description { get; set; }
         public string rationale { get; set; }
