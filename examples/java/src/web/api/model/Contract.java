@@ -19,7 +19,17 @@ public class Contract {
 	
 	public Period period;
 	
+	public List<Item> items;
 	
+	
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+
 	public Period getPeriod() {
 		return period;
 	}

@@ -1,9 +1,10 @@
 # Csharp API call
 This is a UI page for querying the CNs based on the CN ID or Publish Date by calling the given API which can be configured.
 
-## Framework
- - ASP.NET MVC (https://www.asp.net/mvc)
- - Bootstrap (https://getbootstrap.com/)
+## Requirements
+ - Microsoft .NET Framework 4.6.1 SDK
+ - IIS 7.5
+ - OCDS API Call URL (https://app.swaggerhub.com/apis-docs/austender/ocds-api/1.0)
  
 ## Use the UI
 Run the application and it goes to Index.html which has two links below:

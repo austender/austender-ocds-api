@@ -1,9 +1,11 @@
 # Java API call
 This is a UI page for querying the CNs based on the CN ID or Publish Date by calling the given API which can be configured.
 
-## Framework
- - JavaServer Faces (JSF) (https://www.tutorialspoint.com/jsf/)
- - jQuery UI (https://jqueryui.com/)
+## Requirements
+ - Java SDK 1.8
+ - JSF 2.4
+ - Tomcat 9.0
+ - OCDS API Call URL (https://app.swaggerhub.com/apis-docs/austender/ocds-api/1.0)
 
 ## Use the UI
 Run the application and it goes to Index.html which has two links below:

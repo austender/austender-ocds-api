@@ -33,6 +33,7 @@ namespace OCDSApi.Utilities
                 throw new System.InvalidOperationException(e.Message + " from " + url);
             }
             //ApiResponse apiResponse = new ApiResponse { releases = new List<Release>() };
+
             try
             {
                 T apiResponse = JsonConvert.DeserializeObject<T>(httpResult);

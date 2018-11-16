@@ -25,6 +25,7 @@
             </tr>
             @if (contract != null)
             {
+                var procumentMethod = contract.items?.FirstOrDefault()?.additionalClassifications?.FirstOrDefault()?.Description ?? "";
                 <tr>
                     <th>Description</th>
                     <td>@Html.Raw(contract.description)</td>
@@ -32,6 +33,10 @@
                 <tr>
                     <th>Status</th>
                     <td>@contract.status</td>
+                </tr>
+                <tr>
+                    <th>Procurement Method</th>
+                    <td>@procumentMethod</td>
                 </tr>
                 <tr>
                     <th>Start Date</th>

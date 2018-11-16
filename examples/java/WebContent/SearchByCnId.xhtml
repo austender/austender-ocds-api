@@ -59,6 +59,8 @@
 					<h:outputText value="#{release.date}"/>
 					<b>Description</b>
 					<h:outputText value="#{contract.description}" escape="false" />
+					<b>Procurement Method</b>
+					<h:outputText value="#{contract.items[0].additionalClassifications[0].description}" />
 					<b>Status</b>
 					<h:outputText value="#{contract.status}" />
 					<b>Start Date</b>

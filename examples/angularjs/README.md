@@ -1,9 +1,12 @@
 # AngularJS API call
 This is a UI page for querying the CNs based on the CN ID or Publish Date by calling the given API which can be configured.
 
-## Framework
- - AngularJs (https://angularjs.org/)
- - Bootstrap (https://getbootstrap.com/)
+## Requirements
+ - AngularJS v1.7.5
+ - jQuery v1.12.4
+ - jQuery UI - v1.12.1 
+ - Bootstrap v4.0.0
+ - OCDS API Call URL (https://app.swaggerhub.com/apis-docs/austender/ocds-api/1.0)
 
 ## Use the UI
 Run the Index.html and the page has two links below:
