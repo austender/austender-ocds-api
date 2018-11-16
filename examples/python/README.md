@@ -1,11 +1,10 @@
 # Python API call
 This is a UI page for querying the CNs based on the CN ID or Publish Date by calling the given API which can be configured.
 
-## Web Framework
-This project use a free and open source Python Web Framework,Django.
-### Versions:
+##Requirements
  - Ptyhon 3.7.1
  - Django 2.2
+ - juqery-1.12.4
 	
 ## Setup
 You can download the Project directly from Git Hub

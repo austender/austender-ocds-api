@@ -69,12 +69,22 @@
                     <th>Country</th>
                     <td>{{release.supplier.address.countryName}}</td>
                 </tr>
+                 <tr>
+                    <th>Procurement Method</th>
+                        <td>
+                            {% for item in release.contract.items %}
+                                {% for procurement in item.additionalClassifications %}
+                                    {{ procurement.description }}
+                                {% endfor %}
+                            {% endfor %}
+                        </td>
+                </tr>
             {% endif %}
             {% if release.contract.amendments %}
                 <tr>
                     <th>Amendments</th>
                     <td>
-                        <ul style="padding: 0">
+                        <ul style="padding: 20px">
                             {% for amendment in release.contract.amendments %}
                                 <li>
                                     <a href="CnIdSearch?CnId={{amendment.cnid}}" target="_blank" >{{amendment.cnid}}</a>({{amendment.date}})
