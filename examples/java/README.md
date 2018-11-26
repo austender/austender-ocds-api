@@ -27,4 +27,7 @@ When searching in the form,
 
 ## Note
 
-- This sample code does not go through results that has pagination. 
+- This sample code does not go through results that has pagination.
+
+## Author
+- Xiutao Liu

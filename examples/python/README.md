@@ -24,4 +24,7 @@ The home page contains links to the query page.
 
  ## Note
 
- - This sample code does not go through results that has pagination. 
+ - This sample code does not go through results that has pagination.
+
+## Author
+ - Yang Li
