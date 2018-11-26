@@ -13,18 +13,22 @@ If you have multiple setup or different versions of Python, it is best to use a 
 
 ## Setup
 You can download the Project directly from Git Hub
-Using a IDE,to open the project,such as PyChamrm. Several files need to be mentioned
+Using any IDE, to open the project. <br/>Several files need to be mentioned
  - templates directory contain the template files
  - ApiWeb/config.oy,config the API URL
  - ApiWeb/RequestHelper.py,a service that call the API
 
 ### If you are  using [Virtualenv](https://virtualenv.pypa.io/en/latest/)
-- Setup a Virtual Environment `virtualenv <env> -p <path to python>` <br/>
+- Setup a Virtual Environment: `virtualenv <env> -p <path to python>`, this will create a <env> directory with specific python installation <br/>
   ```
   virtualenv dev
   ```
--
-
+- Activate Virtual Environment: `source <env>/bin/activate` or `. <env>/bin/activate`, this will activate the Python Environment <br/>
+  ```
+  source dev/bin/activate
+  ```
+- Do whatever you need to do in python (e.g. install a module - the module will only be installed in this <env> directory and not Globally).....
+- To deactivate the Python Environment, type `deactivate`
 
 ## Launch Django server
 	Open the terminal window and enter the command 'python manage.py runserver 0.0.0.0:8000';
