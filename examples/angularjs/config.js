@@ -1,2 +1,2 @@
-var findByIdUrl="https://pckejpgtj2.execute-api.ap-southeast-2.amazonaws.com/dev/ocds/findById/";
-var findByPublishDateUrl="https://pckejpgtj2.execute-api.ap-southeast-2.amazonaws.com/dev/ocds/findByDates/contractPublished/";
+var findByIdUrl="https://ocdsapi-test.tenders.gov.au/ocds/findById/";
+var findByPublishDateUrl="https://ocdsapi-test.tenders.gov.au/ocds/findByDates/contractPublished/";

@@ -16,11 +16,15 @@ The above search execute queries and list the results on the same page below the
 
 ## Download code and setup
 - The code can be downloaded directly or cloned by git tools (SourceTree, etc).
-- In the Eclipse, open the project, build and run the application with Tomcat. 
+- In the Eclipse, open the project, build and run the application with Tomcat.
 - The API URL can be configured in the src/config.properties file. (FindByIdUrl or FindByPublishDateUrl)
 
 ## Test the UI
-When searching in the form, 
+When searching in the form,
 1. The CN ID format should include "CN" prefix such as CN2086021;
 2. The Publish Date should be a "yyyy-MM-dd" format;
 3. When the format is incorret, there're no results returned.
+
+## Note
+
+- This sample code does not go through results that has pagination. 
