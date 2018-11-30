@@ -1,9 +1,4 @@
 {
-  "id": "http://tenders.gov.au/schema/extensions/release-package-schema.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Schema for an Open Contracting Release Package",
-  "description": "Note that all releases within a release package must have a unique releaseID within this release package.",
-  "type": "object",
   "properties": {
     "links": {
       "title": "Pagination Links",

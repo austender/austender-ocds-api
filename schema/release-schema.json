@@ -1,10 +1,46 @@
 {
   "definitions": {
+    "Contract" : {
+      "properties":{
+        "procurementMethod": {
+          "title": "Procurement method",
+          "description": "Specify tendering method used for this contract.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "procurementmethod.csv",
+          "openCodelist": false,
+          "enum": [
+            "open",
+            "selective",
+            "limited",
+            null
+          ]
+        },
+        "procurementMethodDetails": {
+          "title": "Procurement method details",
+          "description": "Additional detail on the procurement method used. This field may be used to provide the local name of the particular procurement method used.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "procurementMethodRationale": {
+          "title": "Procurement method rationale",
+          "description": "Rationale for the chosen procurement method. This is especially important to provide a justification in the case of limited tenders or direct awards.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
     "Amendment": {
       "properties": {
         "additionalAmendmentDetails" : {
           "title" : "Additional Amendment Details",
-          "description": "Additional Details of what has change for this Amendment", 
+          "description": "Additional Details of what has change for this Amendment",
           "type": [
             "array",
             "null"
@@ -13,38 +49,6 @@
             "$ref": "#/definitions/AdditionalAmendmentDetails"
           }
         }
-      },
-      "procurementMethod": {
-        "title": "Procurement method",
-        "description": "Specify tendering method used for this contract.",
-        "type": [
-          "string",
-          "null"
-        ],
-        "codelist": "procurementmethod.csv",
-        "openCodelist": false,
-        "enum": [
-          "open",
-          "selective",
-          "limited",
-          null
-        ]
-      },
-      "procurementMethodDetails": {
-        "title": "Procurement method details",
-        "description": "Additional detail on the procurement method used. This field may be used to provide the local name of the particular procurement method used.",
-        "type": [
-          "string",
-          "null"
-        ]
-      },
-      "procurementMethodRationale": {
-        "title": "Procurement method rationale",
-        "description": "Rationale for the chosen procurement method. This is especially important to provide a justification in the case of limited tenders or direct awards.",
-        "type": [
-          "string",
-          "null"
-        ]
       }
     },
     "AdditionalAmendmentDetails": {
