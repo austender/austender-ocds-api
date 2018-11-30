@@ -13,6 +13,8 @@ namespace OCDSApi.Models
         public string description { get; set; }
 
         public string status { get; set; }
+        public string procurementMethod { get; set; }
+        public string procurementMethodDetails { get; set; }
 
         public Period period { get; set; }
         public Value value { get; set; }
