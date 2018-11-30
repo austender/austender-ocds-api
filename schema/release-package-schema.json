@@ -1,0 +1,34 @@
+{
+  "id": "http://tenders.gov.au/schema/extensions/release-package-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Schema for an Open Contracting Release Package",
+  "description": "Note that all releases within a release package must have a unique releaseID within this release package.",
+  "type": "object",
+  "properties": {
+    "links": {
+      "title": "Pagination Links",
+      "description": "An API can return huge amount of data that HTTP can't handle. There is a way to set the MAX amount of data displayed at a time and traverse to the next set just like browsing an HTTP UI Page.",
+      "type": "object",
+      "properties": {
+        "prev": {
+          "title": "prev",
+          "description": "The previous URI of the previous set of api data.",
+          "type": "string",
+          "format": "uri"
+        },
+        "self": {
+          "title": "self",
+          "description": "The current URI of the current set of api data.",
+          "type": "string",
+          "format": "uri"
+        },
+        "next": {
+          "title": "next",
+          "description": "The next URI of the next set api data.",
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}

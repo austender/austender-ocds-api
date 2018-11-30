@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "Amendment": {
+      "properties": {
+        "additionalAmendmentDetails" : {
+          "title" : "Additional Amendment Details",
+          "description": "Additional Details of what has change for this Amendment",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AdditionalAmendmentDetails"
+          }
+        }
+      }
+    },
+    "AdditionalAmendmentDetails": {
+      "properties": {
+        "name": {
+          "title": "Amendment Detail Name",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Name of the Amendment Detail"
+        },
+        "value": {
+          "title": "Amendment Detail Value",
+          "type": [
+            "string",
+            "number",
+            "null"
+          ],
+          "description": "Value of the Amendment Detail"
+        }
+      }
+    }
+  }
+}

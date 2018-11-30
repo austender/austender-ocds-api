@@ -1,0 +1,26 @@
+{
+  "name": {
+    "en": "Name of extension (required in at least one language)"
+  },
+  "description": {
+    "en": "A brief description of what this extension does, this will be pulled into the main docs as a link (required in at least one language)"
+  },
+  "documentationUrl": {
+    "en": "http://httpbin.org/anything/path/to/documentation/in/specified/language"
+  },
+  "schemas": [
+    "record-package-schema.json",
+    "release-package-schema.json",
+    "release-schema.json"
+  ],
+  "codelists": [
+    "emptyCodelist.csv"
+  ],
+  "compatibility": [
+    "1.1"
+  ],
+  "dependencies": [
+    "http://httpbin.org/anything/path/to/extension1/extension.json",
+    "http://httpbin.org/anything/path/to/extension2/extension.json"
+  ]
+}
