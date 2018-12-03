@@ -42,22 +42,26 @@ namespace OCDSApi.Utilities
 
                 if (url.ToLower().Contains("findbyid"))
                 {
-                    if(apiResponse.Releases.Count > 1)
+                    if (apiResponse.Releases.Count >= 1)
                     {
-                        var amendments = apiResponse.Releases.Skip(1).Select(r => new Amendment()
-                        {
-                            id = r.contracts.FirstOrDefault()?.amendments.FirstOrDefault()?.id,
-                            date = r.date
-                        }).ToList();
+                        var release = apiResponse.Releases.First();
+                        release.isParent = release.tag.FirstOrDefault() == "contract";
 
-                        if (amendments.Any())
+                        if (release.isParent)
                         {
-                            var release = apiResponse.Releases.First();
-                            release.isParent = true;
-                            release.contracts.First().amendments = amendments;
+                            var amendments = apiResponse.Releases.Skip(1).Select(r => new Amendment()
+                            {
+                                id = r.contracts.FirstOrDefault()?.amendments.FirstOrDefault()?.id,
+                                date = r.date
+                            }).ToList();
 
-                            apiResponse.Releases = apiResponse.Releases.Take(1).ToList();
+                            if (amendments.Any())
+                            {
+                                release.contracts.First().amendments = amendments;
+                            }
                         }
+
+                        apiResponse.Releases = apiResponse.Releases.Take(1).ToList();
                     }
                     else
                     {
