@@ -14,6 +14,8 @@ namespace OCDSApi.Models
 
         public List<Award> awards { get; set; }
         public List<Contract> contracts { get; set; }
+        public Tender tender { get; set; }
+        public bool isParent { get; set; } = false;
 
     }
 }
