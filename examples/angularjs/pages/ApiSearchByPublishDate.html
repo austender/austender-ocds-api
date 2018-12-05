@@ -62,7 +62,7 @@
 					<tbody>
 						<tr>
 							<th>CN ID </th>
-							<td>{{release.id}}</td>
+							<td>{{release.isParent ? release.contracts[0].id : release.contracts[0].amendments[0].id}}</td>
 						</tr>
 						<tr>
 							<th>Publish Date</th>
@@ -78,7 +78,7 @@
 						</tr>
 						<tr>
 							<th style="width:20%">Procurement Method</th>
-							<td>{{release.contracts[0].items[0].additionalClassifications[0].description}}</td>
+							<td>{{release.tender.procurementMethodDetails}}</td>
 						</tr>
 						<tr>
 							<th>Start Date</th>
@@ -97,10 +97,6 @@
 							<td>{{release.parties[0].name}}</td>
 						</tr>
 						<tr>
-							<th>Postal Address</th>
-							<td>{{release.parties[0].address.streetAddress}}</td>
-						</tr>
-						<tr>
 							<th>Town/City</th>
 							<td>{{release.parties[0].address.locality}}</td>
 						</tr>
@@ -116,12 +112,12 @@
 							<th>Country</th>
 							<td>{{release.parties[0].address.countryName}}</td>
 						</tr>
-						<tr ng-if="release.contracts[0].amendments.length">
+						<tr ng-if="release.isParent && release.contracts[0].amendments.length">
 							<th>Amendments</th>
 							<td>
 								<ul>
 									<li ng-repeat="amendment in release.contracts[0].amendments">
-										<a href ng-click="searchById(amendment.cnid)">{{amendment.cnid}}</a> <span ng-if="amendment.date.length")>({{amendment.date}})</span>
+										<a href ng-click="searchById(amendment.id)">{{amendment.id}}</a> <span ng-if="amendment.date.length")>({{amendment.date}})</span>
 									</li>	
 								</ul>
 							</td>

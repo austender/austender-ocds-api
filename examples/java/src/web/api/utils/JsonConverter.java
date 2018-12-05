@@ -6,6 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
@@ -24,8 +26,8 @@ public class JsonConverter {
 		InputStream objFileInputStream = getClass().getClassLoader().getResourceAsStream("config.properties");
 		Properties commonProperties = new Properties();
 		commonProperties.load(objFileInputStream);
-		startDate = formatDate(startDate);
-		endDate = formatDate(endDate);
+		startDate = formatDate(startDate, false);
+		endDate = formatDate(endDate, true);
 		
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -112,9 +114,17 @@ public class JsonConverter {
 		return response.toString();*/
 	}
 	
-	public String formatDate(String date) throws ParseException {
+	public String formatDate(String date, Boolean isEndDate) throws ParseException {
 		if(date != null && date.length()>0) {
-			return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(new SimpleDateFormat("yyyy-MM-dd").parse(date));
+			Date formatDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+			if(isEndDate) {
+				Calendar c = Calendar.getInstance();
+		        c.setTime(formatDate);
+		        c.add(Calendar.DAY_OF_MONTH, 1);
+		        formatDate = c.getTime();
+			}
+			
+			return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(formatDate);
 		}
 		
 		return "";
