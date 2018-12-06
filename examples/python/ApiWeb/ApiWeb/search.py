@@ -25,19 +25,28 @@ def CnIdSearch(request):
     dic_json = json.loads(str_json.decode('utf-8'))
 
     data = {}
-
+    index = 0
+    amendments = list()
     if 'errorCode' in dic_json:
         data['message'] = dic_json['message']
         data['errorCode'] = dic_json['errorCode']
     else:
         for release in dic_json['releases']:
-            if len(release['parties']):
-                release['supplier'] = (release['parties'])[0]
-            if len(release['contracts']):
-                release['contract'] = (release['contracts'])[0]
-        data['data'] = dic_json
+            if index == 0:
+                if len(release['parties']):
+                    release['supplier'] = (release['parties'])[0]
+                if len(release['contracts']):
+                    release['contract'] = (release['contracts'])[0]
+                    (release["contract"])["amendments"] = []
+            else:
+                amendment = ((release['contracts'])[0])["amendments"][0]
+                amendments.append(amendment)
+            index += 1
+    cn = dic_json["releases"][0]
+    (cn["contract"])["amendments"] = amendments
+    data['releases'] = []
+    data['releases'].append(cn)
     data['Title'] = 'API Search Result'
-    print(data)
     return render(request, 'searchApiResult.html', data)
 
 
@@ -63,10 +72,25 @@ def DateRangeSearch(request):
         data = {'errorCode': e.code, 'message': 'No Records found', 'Title': 'API Search Result'}
         return render(request, 'searchApiResult.html', data)
 
+    index = 0
+    amendments = []
+    cns = list()
+    print(dic_json["releases"])
     for release in dic_json['releases']:
-        if len(release['parties']):
-            release['supplier'] = (release['parties'])[0]
-        if len(release['contracts']):
-            release['contract'] = (release['contracts'])[0]
-
-    return render(request, 'searchApiResult.html', {'data': dic_json, 'Title': 'API Search Result'})
+        if (release["tag"])[0] == "contract":
+            if amendments:
+                (cns[index-1])["contract"]["amendments"] = amendments
+                amendments = []
+            if len(release['parties']):
+                release['supplier'] = (release['parties'])[0]
+            if len(release['contracts']):
+                release['contract'] = (release['contracts'])[0]
+            cn = release
+            cns.append(cn)
+            index += 1
+        else:
+            amendment = ((release['contracts'])[0])["amendments"][0]
+            amendments.append(amendment)
+    if amendments:
+        (cns[index-1])["contract"]["amendments"] = amendments
+    return render(request, 'searchApiResult.html', {'releases': cns, 'Title': 'API Search Result'})

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="855c6a1a-5bc5-4b6f-b080-09dd91d7e16a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiWeb/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeb/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiWeb/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeb/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiWeb/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeb/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/searchApiResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/searchApiResult.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +19,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ApiWeb$search.coverage" NAME="search Coverage Results" MODIFIED="1542166074382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ApiWeb" />
-    <SUITE FILE_PATH="coverage/ApiWeb$main.coverage" NAME="main Coverage Results" MODIFIED="1542348270778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ApiWeb" />
+    <SUITE FILE_PATH="coverage/ApiWeb$main.coverage" NAME="main Coverage Results" MODIFIED="1544061346931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ApiWeb" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -57,40 +60,43 @@
     <session id="-366601607">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
-          <entry key="html" value="7" />
+          <entry key="html" value="8" />
           <entry key="js" value="5" />
-          <entry key="py" value="18" />
+          <entry key="py" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="7" />
+          <entry key="HTML" value="8" />
           <entry key="JavaScript" value="5" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="833" />
-          <entry key="py" value="2491" />
+          <entry key="html" value="993" />
+          <entry key="py" value="4659" />
           <entry key="py@ApiWeb" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CommandLine" value="23" />
-          <entry key="HTML" value="833" />
-          <entry key="Python" value="2491" />
+          <entry key="HTML" value="993" />
+          <entry key="Python" value="4659" />
         </counts>
       </usages-collector>
     </session>
@@ -100,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ApiWeb/RequestHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="184">
               <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -121,17 +127,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ApiWeb/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="68" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="78" />
+            <state relative-caret-position="476">
+              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+                <marker date="1544061344833" expanded="true" signature="93:94" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/DateRangeSearch.html">
+        <entry file="file://C:/Python/Python37/Lib/urllib/request.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="31" column="104" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="104" />
+            <state relative-caret-position="458">
+              <caret line="1322" selection-start-line="1322" selection-end-line="1322" />
             </state>
           </provider>
         </entry>
@@ -139,44 +149,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/searchApiResult.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="79" column="29" lean-forward="true" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+            <state relative-caret-position="414">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
+                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#td#0;n#tr#14;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ApiWeb/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="104" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="104" />
+            <state relative-caret-position="46">
+              <caret line="2" column="97" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="97" />
               <folding>
-                <marker date="1542173474711" expanded="true" signature="13:18" ph="..." />
+                <marker date="1544000105985" expanded="true" signature="13:18" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ApiWeb/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="159">
+              <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
               <folding>
                 <element signature="e#25#60#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python/Python37/Lib/site-packages/Django-2.2-py3.7.egg/django/core/handlers/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2645">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
             </state>
           </provider>
         </entry>
@@ -206,14 +208,16 @@
         <option value="$PROJECT_DIR$/ApiWeb/view.py" />
         <option value="$PROJECT_DIR$/ApiWeb/urls.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/ApiWeb/config.py" />
         <option value="$PROJECT_DIR$/templates/CnIdSearch.html" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/templates/DateRangeSearch.html" />
         <option value="$PROJECT_DIR$/ApiWeb/RequestHelper.py" />
+        <option value="$PROJECT_DIR$/Module/Cn.py" />
+        <option value="$PROJECT_DIR$/Module/release.py" />
+        <option value="$PROJECT_DIR$/ApiWeb/config.py" />
+        <option value="$PROJECT_DIR$/templates/searchApiResult.html" />
         <option value="$PROJECT_DIR$/ApiWeb/main.py" />
         <option value="$PROJECT_DIR$/ApiWeb/search.py" />
-        <option value="$PROJECT_DIR$/templates/searchApiResult.html" />
       </list>
     </option>
   </component>
@@ -307,11 +311,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Tenders\OCDS\examples\python\ApiWeb\static\css" />
       <recent name="D:\Tenders\OCDS\examples\python\ApiWeb\static\js" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Tenders\OCDS\examples\python\ApiWeb\static\css" />
       <recent name="D:\Tenders\OCDS\examples\python\ApiWeb\static\js" />
     </key>
@@ -425,13 +429,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20948827" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22014925" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27982646" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -439,9 +443,10 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30477223" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28416485" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info active="true" anchor="bottom" id="manage.py@ApiWeb" order="13" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -490,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/CnIdSearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python/Python37/Lib/ssl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13018">
@@ -508,9 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,13 +520,6 @@
     <entry file="file://$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" />
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap-datepicker.min.js" />
     <entry file="file://$PROJECT_DIR$/static/js/jquery-ui.css" />
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/jquery-1.12.4.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -545,16 +533,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/DateRangeSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="31" column="104" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/CnIdSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module/Cn.py" />
+    <entry file="file://$PROJECT_DIR$/Module/release.py" />
     <entry file="file://C:/Python/Python37/Lib/site-packages/Django-2.2-py3.7.egg/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2645">
+        <state relative-caret-position="523">
           <caret line="126" selection-start-line="126" selection-end-line="126" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApiWeb/RequestHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="184">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -562,35 +566,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApiWeb/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="68" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/DateRangeSearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="31" column="104" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApiWeb/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#25#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/searchApiResult.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="79" column="29" lean-forward="true" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+        <state relative-caret-position="414">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#td#0;n#tr#14;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -598,10 +579,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ApiWeb/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="104" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="104" />
+        <state relative-caret-position="46">
+          <caret line="2" column="97" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="97" />
           <folding>
-            <marker date="1542173474711" expanded="true" signature="13:18" ph="..." />
+            <marker date="1544000105985" expanded="true" signature="13:18" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python/Python37/Lib/urllib/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="1322" selection-start-line="1322" selection-end-line="1322" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiWeb/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <marker date="1544061344833" expanded="true" signature="93:94" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiWeb/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+          <folding>
+            <element signature="e#25#60#0" expanded="true" />
           </folding>
         </state>
       </provider>

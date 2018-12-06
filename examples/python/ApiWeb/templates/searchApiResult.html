@@ -11,12 +11,12 @@
     <h1>{{Title}}</h1>
     <p style="text-align: right;"><a href="/">Back to Index</a></p>
     <p>{{ message }}</p>
-    {% for release in data.releases %}
+    {% for release in releases %}
         <hr/>
         <table style="width: 100%">
             <tr>
                 <th>CN ID</th>
-                <td>{{release.id}}</td>
+                <td style="width: 60%;">{{release.contract.id}}</td>
             </tr>
             <tr>
                 <th>Publish Date</th>
@@ -72,28 +72,25 @@
                  <tr>
                     <th>Procurement Method</th>
                         <td>
-                            {% for item in release.contract.items %}
-                                {% for procurement in item.additionalClassifications %}
-                                    {{ procurement.description }}
-                                {% endfor %}
-                            {% endfor %}
+                           {{ release.tender.procurementMethod }}
                         </td>
                 </tr>
+                {% if release.contract.amendments %}
+                    <tr>
+                        <th>Amendments</th>
+                        <td>
+                            <ul style="padding: 20px">
+                                {% for amendment in release.contract.amendments %}
+                                    <li>
+                                        <a href="CnIdSearch?CnId={{amendment.id}}" target="_blank" >{{amendment.id}}</a>({{amendment.date}})
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                {% endif %}
             {% endif %}
-            {% if release.contract.amendments %}
-                <tr>
-                    <th>Amendments</th>
-                    <td>
-                        <ul style="padding: 20px">
-                            {% for amendment in release.contract.amendments %}
-                                <li>
-                                    <a href="CnIdSearch?CnId={{amendment.cnid}}" target="_blank" >{{amendment.cnid}}</a>({{amendment.date}})
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </td>
-                </tr>
-            {% endif %}
+
         </table>
     {% endfor %}
 </body>
