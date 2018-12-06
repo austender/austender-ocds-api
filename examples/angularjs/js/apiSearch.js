@@ -31,7 +31,8 @@ app.controller('searchForm', function($scope, $http) {
 		}
 		else{
 			 var startDate = $scope.formatDate($scope.dateStart);
-			 var endDate = $scope.formatDate($scope.dateEnd);
+			 var endDate = $scope.formatDate($scope.dateEnd, true);
+			 console.log(startDate + "/" + endDate);
 			$scope.search(findByPublishDateUrl + startDate + "/" + endDate);
 		}
 		
@@ -45,7 +46,60 @@ app.controller('searchForm', function($scope, $http) {
 			url: url
 		}).then(function successCallback(response) {
 			$scope.showResults = true;
+			if(url.includes("findById")){
+				if(response.data.releases.length >= 1){
+					var firstRelease = response.data.releases[0];
+					firstRelease.isParent = firstRelease.tag[0] == "contract";
+					if(firstRelease.isParent && response.data.releases.length > 1){
+						firstRelease.contracts[0].amendments = [];
+						for (var i=1; i<response.data.releases.length; i++) {
+						    var release = response.data.releases[i];
+						    console.log(release.contracts[0].amendments.length);
+						    if(release.contracts[0].amendments.length > 0){
+						    	var amendment = {
+						    		id : release.contracts[0].amendments[0].id,
+						    		date : release.date
+						    	}; 
+
+						    	firstRelease.contracts[0].amendments.push(amendment);
+						    }
+						}
+					}
+					response.data.releases = [];
+					response.data.releases.push(firstRelease);
+				}
+			}
+			else{
+				var results = [];
+				var amendments = [];
+				response.data.releases.forEach(function(release){
+	            	if(release.tag[0] == "contractAmendment"){
+	            		var amendment = {
+	            			id : release.contracts[0].amendments[0].id,
+	            			date : release.date
+	            		};
+	            		amendments.push(amendment);
+	            	}
+	        	});
+
+				response.data.releases.forEach(function(release){
+					if(release.tag[0] == "contractAmendment"){
+						results.push(release);
+					}
+					else{
+						release.isParent = true;
+						release.contracts[0].amendments = amendments.filter(function(amendment) {
+						  return amendment.id.includes(release.contracts[0].id + "-A");
+						});
+						results.push(release);
+					}
+				});
+
+			}
+
+
 			$scope.data = response.data;
+
 		}, function errorCallback(response) {
 			$scope.showResults = true;
 			$scope.data = response.data;
@@ -54,9 +108,13 @@ app.controller('searchForm', function($scope, $http) {
 		});
 	};
 
-	$scope.formatDate = function(strDate){
+	$scope.formatDate = function(strDate,isEndDate){
 		var date = new Date(strDate);
-		return date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+"T00:00:00Z";
+		var day = date.getDate();
+		if(isEndDate){
+			day += 1;
+		}
+		return date.getFullYear()+"-"+(date.getMonth()+1)+"-"+day+"T00:00:00Z";
 	}
 });
 

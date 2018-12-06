@@ -1,0 +1,18 @@
+{
+  "name": {
+    "en": "Austender OCDS Exension"
+  },
+  "description": {
+    "en": "A mapping of Austender Data that is not available in OCDS Standard Data"
+  },
+  "documentationUrl": {
+    "en": "https://github.com/austender/etender-ocds-api/schema"
+  },
+  "schemas": [
+    "release-package-schema.json",
+    "release-schema.json"
+  ],
+  "compatibility": [
+    "1.1"
+  ]
+}

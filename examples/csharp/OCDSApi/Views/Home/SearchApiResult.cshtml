@@ -1,5 +1,4 @@
-﻿@using System.Configuration
-@using OCDSApi.Models
+﻿@using OCDSApi.Models
 @model ApiResponse
 @{
     ViewBag.Title = "API Search Result";
@@ -13,19 +12,21 @@
     {
         var supplier = release.parties.FirstOrDefault();
         var contract = release.contracts.FirstOrDefault();
+
         <hr />
         <table style="width: 100%">
-            <tr>
-                <th>CN ID</th>
-                <td>@release.id</td>
-            </tr>
-            <tr>
-                <th>Publish Date</th>
-                <td>@release.date</td>
-            </tr>
             @if (contract != null)
             {
-                var procumentMethod = contract.items?.FirstOrDefault()?.additionalClassifications?.FirstOrDefault()?.Description ?? "";
+                var procumentMethod = release.tender?.procurementMethodDetails ?? "";
+                <tr>
+                    <th>CN ID</th>
+                    <td>@(release.isParent ? contract.id : contract.amendments.FirstOrDefault().id)</td>
+                </tr>
+                <tr>
+                    <th>Publish Date</th>
+                    <td>@release.date</td>
+                </tr>
+
                 <tr>
                     <th>Description</th>
                     <td>@Html.Raw(contract.description)</td>
@@ -58,10 +59,6 @@
                     <td>@supplier.name</td>
                 </tr>
                 <tr>
-                    <th>Postal Address</th>
-                    <td>@supplier.address.streetAddress</td>
-                </tr>
-                <tr>
                     <th>Town/City</th>
                     <td>@supplier.address.locality</td>
                 </tr>
@@ -78,16 +75,17 @@
                     <td>@supplier.address.countryName</td>
                 </tr>
             }
-            @if (contract?.amendments != null && contract.amendments.Any())
+            @if (release.isParent && contract?.amendments != null && contract.amendments.Any())
             {
                 <tr>
                     <th>Amendments</th>
                     <td>
-                        <ul style="padding: 0">
+                        <ul>
                             @foreach (var amendment in contract.amendments)
-                            {
+                        {
                                 <li>
-                                    @Html.ActionLink(amendment.cnid,"SearchApi","Home", new {CnId=amendment.cnid }, new {target= "_blank" }) @if(!string.IsNullOrEmpty(amendment.date)) {@Html.Raw("(" + amendment.date + ")")} 
+                                    @Html.ActionLink(amendment.id, "SearchApi", "Home", new { CnId = amendment.id }, new { target = "_blank" }) @if (!string.IsNullOrEmpty(amendment.date))
+                                    {@Html.Raw("(" + amendment.date + ")")}
                                 </li>
                             }
                         </ul>
@@ -101,7 +99,3 @@ else
 {
     <p>There are no results that match your selection.</p>
 }
-
-
-
-

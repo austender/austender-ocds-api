@@ -53,6 +53,7 @@ namespace OCDSApi.Controllers
             }
             if (!IsNullOrEmpty(dateEnd) && DateTime.TryParse(dateEnd, out temp))
             {
+                temp = temp.AddDays(1);
                 dateEnd = temp.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ssZ");
             }
             var requestHelper = new RequestHelper();

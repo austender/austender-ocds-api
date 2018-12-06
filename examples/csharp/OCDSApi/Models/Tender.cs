@@ -44,5 +44,6 @@ namespace OCDSApi.Models
         public List<Document> documents { get; set; }
         public Amendments amendments { get; set; }
         public string estimatedDateToMarket { get; set; }
+        public string procurementMethodDetails { get; set; }
     }
 }

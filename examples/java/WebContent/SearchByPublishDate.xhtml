@@ -69,7 +69,7 @@
 				<ui:param name="supplier" value="#{release.parties[0]}" />
 				<p:panelGrid columns="2" border="0">
 					<b>CN ID</b>
-					<h:outputText value="#{release.id}" />
+					<h:outputText value="#{release.isParent ? contract.id : contract.amendments[0].id}" />
 					<b>Publish Date</b>
 					<h:outputText value="#{release.date}" />
 					<b>Description</b>
@@ -77,7 +77,7 @@
 					<b>Status</b>
 					<h:outputText value="#{contract.status}" />
 					<b>Procurement Method</b>
-					<h:outputText value="#{contract.items[0].additionalClassifications[0].description}" />
+					<h:outputText value="#{release.tender.procurementMethodDetails}" />
 					<b>Start Date</b>
 					<h:outputText value="#{contract.period.startDate}" />
 					<b>End Date</b>
@@ -86,8 +86,6 @@
 					<h:outputText value="$#{contract.value.amount}" />
 					<b>Supplier Name</b>
 					<h:outputText value="#{supplier.name}" />
-					<b>Postal Address</b>
-					<h:outputText value="#{supplier.address.streetAddress}" />
 					<b>Town/City</b>
 					<h:outputText value="#{supplier.address.locality}" />
 					<b>State/Territory</b>
@@ -96,13 +94,13 @@
 					<h:outputText value="#{supplier.address.postalCode}" />
 					<b>Country</b>
 					<h:outputText value="#{supplier.address.countryName}" />
-					<h:outputLabel rendered="#{not empty contract.amendments}">
+					<h:outputLabel rendered="#{release.isParent == true and not empty contract.amendments}">
 						<b>Amendments</b>
 					</h:outputLabel>
-					<h:outputLabel rendered="#{not empty contract.amendments}">
+					<h:outputLabel rendered="#{release.isParent == true and not empty contract.amendments}">
 						<ui:repeat value="#{contract.amendments}" var="amendment">
-							<li><h:link value="#{amendment.cnid}" outcome="SearchByCnId">
-									<f:param name="cnId" value="#{amendment.cnid}" />
+							<li><h:link value="#{amendment.id}" outcome="SearchByCnId">
+									<f:param name="cnId" value="#{amendment.id}" />
 								</h:link> <h:outputText rendered="#{not empty amendment.date}"
 									value=" (#{amendment.date})" /></li>
 						</ui:repeat>

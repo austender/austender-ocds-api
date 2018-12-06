@@ -10,6 +10,10 @@ public class Release {
     public String initiationType;
     public List<Party> parties;
     public List<Contract> contracts;
+    public List<String> tag;
+    public Tender tender;
+    
+    public Boolean isParent = false;
     
     public List<Contract> getContracts() {
 		return contracts;
@@ -53,6 +57,24 @@ public class Release {
 	}
 	public void setInitiationType(String initiationType) {
 		this.initiationType = initiationType;
+	}
+	public List<String> getTag() {
+		return tag;
+	}
+	public void setTag(List<String> tag) {
+		this.tag = tag;
+	}
+	public Tender getTender() {
+		return tender;
+	}
+	public void setTender(Tender tender) {
+		this.tender = tender;
+	}
+	public Boolean getIsParent() {
+		return isParent;
+	}
+	public void setIsParent(Boolean isParent) {
+		this.isParent = isParent;
 	}
 	
 }
