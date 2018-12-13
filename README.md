@@ -12,11 +12,11 @@ The Procurement Office of the Department of Finance spearheaded the implementati
 ## AusTender OCDS API Call
 As of this writing, there are few API calls available:
 
-- [Search by Contract CN ID](https://ocdsapi.tenders.gov.au/ocds/findById/CN00000000)
-- [Search by Contract Published Date](https://ocdsapi.tenders.gov.au/ocds/findByDates/contractPublished/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract Start Date](https://ocdsapi.tenders.gov.au/ocds/findByDates/contractStart/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract End Date](https://ocdsapi.tenders.gov.au/ocds/findByDates/contractEnd/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract Latest Modified Date](https://ocdsapi.tenders.gov.au/ocds/findByDates/contractLastModified/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract CN ID](https://api.tenders.gov.au/ocds/findById/CN00000000)
+- [Search by Contract Published Date](https://api.tenders.gov.au/ocds/findByDates/contractPublished/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Start Date](https://api.tenders.gov.au/ocds/findByDates/contractStart/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract End Date](https://api.tenders.gov.au/ocds/findByDates/contractEnd/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Latest Modified Date](https://api.tenders.gov.au/ocds/findByDates/contractLastModified/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
 
 A detailed documentation of the API is available at [AusTender OCDS Swagger Hub](https://app.swaggerhub.com/apis-docs/austender/ocds-api/)
 
