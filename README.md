@@ -12,16 +12,16 @@ The data and schema are compliant with the Open Contracting Data standard and de
 ## AusTender OCDS API Call
 There are various API calls available:
 
-- [Search by Contract CN ID](https://api.tenders.gov.au/ocds/findById/CN00000000)
-- [Search by Contract Published Date](https://api.tenders.gov.au/ocds/findByDates/contractPublished/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract Start Date](https://api.tenders.gov.au/ocds/findByDates/contractStart/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract End Date](https://api.tenders.gov.au/ocds/findByDates/contractEnd/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract Latest Modified Date](https://api.tenders.gov.au/ocds/findByDates/contractLastModified/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Notice ID](https://api.tenders.gov.au/ocds/findById/CN00000000)
+- [Search by Contract Notice Published Date](https://api.tenders.gov.au/ocds/findByDates/contractPublished/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Notice Start Date](https://api.tenders.gov.au/ocds/findByDates/contractStart/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Notice End Date](https://api.tenders.gov.au/ocds/findByDates/contractEnd/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Notice Latest Modified Date](https://api.tenders.gov.au/ocds/findByDates/contractLastModified/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
 
 A detailed documentation of the API is available at [AusTender OCDS Swagger Hub](https://app.swaggerhub.com/apis-docs/austender/ocds-api/)
 
 ### Notes
-- Dates on the Resftul API Path Parameters should be in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Time Interval Formats.
+- Dates on the RESTful API Path Parameters should be in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Time Interval Formats.
 
 ### Authors
 - Rodel Talampas
