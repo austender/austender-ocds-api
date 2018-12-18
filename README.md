@@ -1,7 +1,7 @@
 # AUSTENDER OCDS API
 The Open Contracting Data Standard (OCDS) was created to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.<sup>[1](#references)</sup>
 
-This developer portal provides consumers of AusTender data with documentation, code examples, bug notifications and feature requests. 
+This portal provides consumers of AusTender data with documentation, code examples, bug notifications and feature requests. 
 
 ## About
 [AusTender](https://tenders.gov.au)<sup>[2](#references)</sup> is the Australian Government procurement information system. The API provides AusTender CN data on demand in a standard machine-readable format.
