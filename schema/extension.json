@@ -6,7 +6,7 @@
     "en": "A mapping of Austender Data that is not available in OCDS Standard Data"
   },
   "documentationUrl": {
-    "en": "https://github.com/austender/etender-ocds-api/schema"
+    "en": "https://github.com/austender/austender-ocds-api/schema"
   },
   "schemas": [
     "release-package-schema.json",
