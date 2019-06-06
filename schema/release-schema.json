@@ -1,68 +1,68 @@
-
 {
-  "definitions": {
-    "Contract" : {
-      "properties":{
-        "LtExempt": {
-          "title": "Lt Exempt",
-          "description": "Lt Exempt.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "LtReasonCode": {
-          "title": "Lt Reason Code",
-          "description": "Lt Reason Code",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "LtReason": {
-          "title": "Lt Reason",
-          "description": "Lt Reason",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "Exemption Code": {
-          "title": "Exemption Code",
-          "description": "Exemption Code",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "Exemption": {
-          "title": "Exemption",
-          "description": "Exemption",
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
-    "Amendment": {
-      "properties": {
-        "originalValue" : {
-          "title" : "Additional Amendment Details",
-          "description": "Additional Details of what has change for this Amendment",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "amendedValue" : {
-          "title" : "Additional Amendment Details",
-          "description": "Additional Details of what has change for this Amendment",
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-    }
-  }
+	"definitions": {
+		"Contract": {
+			"properties": {
+				"LtExempt": {
+					"title": "Lt Exempt",
+					"description": "Lt Exempt.",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"LtReasonCode": {
+					"title": "Lt Reason Code",
+					"description": "Lt Reason Code",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"LtReason": {
+					"title": "Lt Reason",
+					"description": "Lt Reason",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"Exemption Code": {
+					"title": "Exemption Code",
+					"description": "Exemption Code",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"Exemption": {
+					"title": "Exemption",
+					"description": "Exemption",
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			}
+		},
+		"Amendment": {
+			"properties": {
+				"originalValue": {
+					"title": "Additional Amendment Details",
+					"description": "Additional Details of what has change for this Amendment",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"amendedValue": {
+					"title": "Additional Amendment Details",
+					"description": "Additional Details of what has change for this Amendment",
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			}
+		}
+	}
 }
