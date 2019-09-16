@@ -18,7 +18,7 @@ There are various API calls available:
 - [Search by Contract Notice End Date](https://api.tenders.gov.au/ocds/findByDates/contractEnd/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
 - [Search by Contract Notice Latest Modified Date](https://api.tenders.gov.au/ocds/findByDates/contractLastModified/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
 
-Detailed documentation of the API is available at [AusTender OCDS Swagger Hub](https://app.swaggerhub.com/apis-docs/austender/ocds-api/)
+Detailed documentation of the API is available at [AusTender OCDS Swagger Hub](https://app.swaggerhub.com/apis/austender/ocds-api/1.1#/)
 
 ### Notes
 - Dates on the RESTful API Path Parameters should be in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Time Interval Formats.
