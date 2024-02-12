@@ -1,7 +1,7 @@
 # AUSTENDER OCDS API
 The Open Contracting Data Standard (OCDS) was created to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.<sup>[1](#references)</sup>
 
-This portal provides consumers of AusTender data with documentation, code examples, bug notifications and feature requests. 
+This portal provides consumers of AusTender data with documentation, code examples, bug notifications and feature requests.
 
 ## About
 [AusTender](https://tenders.gov.au)<sup>[2](#references)</sup> is the Australian Government procurement information system. The API provides AusTender CN data on demand in a standard machine-readable format.
@@ -12,11 +12,11 @@ The data and schema are compliant with the Open Contracting Data Standard and de
 ## AusTender OCDS API Call
 There are various API calls available:
 
-- [Search by Contract Notice ID](https://api.tenders.gov.au/ocds/findById/CN00000000)
-- [Search by Contract Notice Published Date](https://api.tenders.gov.au/ocds/findByDates/contractPublished/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract Notice Start Date](https://api.tenders.gov.au/ocds/findByDates/contractStart/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Notice ID (from 01-01-2013)](https://api.tenders.gov.au/ocds/findById/CN00000000)
+- [Search by Contract Notice Published Date (from 01-01-2013)](https://api.tenders.gov.au/ocds/findByDates/contractPublished/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Notice Start Date(from 01-01-2013)](https://api.tenders.gov.au/ocds/findByDates/contractStart/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
 - [Search by Contract Notice End Date](https://api.tenders.gov.au/ocds/findByDates/contractEnd/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
-- [Search by Contract Notice Latest Modified Date](https://api.tenders.gov.au/ocds/findByDates/contractLastModified/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
+- [Search by Contract Notice Latest Modified Date(from 01-01-2013)](https://api.tenders.gov.au/ocds/findByDates/contractLastModified/yyyy-mm-ddThh:mi:ssZ/yyyy-mm-ddThh:mi:ssZ)
 
 Detailed documentation of the API is available at [AusTender OCDS Swagger Hub](https://app.swaggerhub.com/apis/austender/ocds-api/1.1#/)
 
